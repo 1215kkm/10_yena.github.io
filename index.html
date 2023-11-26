@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>potpolio website</title>
+    <link rel="stylesheet" href="css/potpolio.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    
+    <!-- <link rel="stylesheet" href="css/slide.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    
+    <style>
+    .p_bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
+  
+  .swiper {
+    width: 860px;
+    height: 809px;
+    position: relative;
+  }
+
+  .mySwiper .swiper-slide {position: relative;
+    display: flex;
+    width: 809px;
+    height: 809px;
+    border-radius:400px;
+    transition: .1s;
+    margin-top: 200px;
+  }
+  .mySwiper .swiper-slide:nth-child(1){
+    margin-top: 0;
+  }
+  .mySwiper .swiper-slide.on {
+      margin-top: 0;
+  }
+
+  .mySwiper .swiper-slide:nth-child(1) {
+    background: url(images/slide1.png);
+  }
+  .mySwiper .swiper-slide:hover {
+    top: -30px;
+  }
+
+  .mySwiper .swiper-slide:nth-child(2) {
+    background: url(images/slide2.png) no-repeat;          
+  }
+
+  .mySwiper .swiper-slide:nth-child(3) {
+    background: url(images/slide3.png) no-repeat;
+  }
+
+  .mySwiper .swiper-slide:nth-child(4) {
+      background: url(images/slide4.png) no-repeat;
+  }
+
+  .mySwiper .swiper-slide:nth-child(5) {
+      background: url(images/slide5.png) no-repeat;
+  }
+
+  .mySwiper .swiper-slide:nth-child(6) {
+      background: url(images/slide6.png) no-repeat;
+  }
+
+
+  .swiper.mySwiper2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide_button {position: absolute; border: 1px solid red;}
+
+  /* 아래 슬라이드 */
+.mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.mySwiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2 .swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mySwiper2 {background: url('images/slide2_bg.png');}
+
+  .swiper-button-next {position: absolute; top: 50%; right: -70px; width: 53px; height: 53px; border-radius: 50px; border: 1px solid #fbd905;}
+  .swiper-button-next:after {width: 15px; height: 24px; font-size: 24px; color: #fbd905;}
+  .swiper-button-prev {position: absolute; top: 50%; left: -70px; width: 53px; height: 53px; border-radius: 50px; border: 1px solid #fbd905;}
+  .swiper-button-prev:after {width: 15px; height: 24px; font-size: 24px; color: #fbd905;}
+  
+  
+  #section3 .d_bt .yn-slide {background: url('images/slide2_bg.png'); position: absolute; width: 200px; height: 20px; top: 290px; border-radius: 20px; left: 50%; transform: translateX(-50%); z-index: 7; overflow: hidden; transition: .2s;}
+  #section3 .d_bt .yn-slide span {position: absolute; width: 50px; height: 100%; background: #000; left: 0; border-radius: 30px;}
+</style>
+
+</head>
+<body>
+    <div class="gnb">
+        <ul class="nav">
+            <li data-naviP="header_bg">
+                <p>main</p>
+            </li>        
+            <li data-naviP="section1">
+                <p>profile</p>
+            </li>
+            <li data-naviP="section2">
+                <p>portpolio</p>
+            </li>
+            <li data-naviP="section3">
+                <p>design</p>
+            </li>
+        </ul>    
+        <span class="line"></span>
+        <div class="pageNum">01</div>
+    </div>
+    <header>
+        <ul class="flower">
+            <li class="fs"><img src="images/flowershining.png" alt="flowershining"></li>
+            <li class="fw"><img src="images/flower1.png" alt="flower"></li>
+        </ul>
+            
+        <div class="main_text on">
+            <h1><span class="main">'도전'</span> 하는 것을 좋아하는 <span>김예나</span> 입니다.</h1>
+        </div>
+    </header>
+    
+    <ul id="header_bg">
+        <li>
+            <img src="images/section1_bg.png" alt="">
+        </li>
+        <li class="sec1_bg1 on">
+            <img src="images/section1_bg1.png" alt="">
+        </li>
+        <li class="sec1_bg2 on">
+            <img src="images/section1_bg2.png" alt="">
+        </li>
+        <li class="sec1_bg3 on">
+            <img src="images/section1_bg3.png" alt="">
+        </li>
+        <li>
+            <img src="images/section2_bg.png" alt="">
+        </li>
+        <li>
+            <img src="images/section2_bg2.png" alt="">
+        </li>
+        <li>
+            <img src="images/section2_bg1.png" alt="">
+        </li>
+        
+        <li>
+            <img src="images/section3_bg.png" alt="">
+        </li>
+        <li>
+            <img src="images/section3_bg1.png" alt="">
+        </li>
+        <li class="footer_wave2">
+            <!-- <img src="images/footer_bg.png" alt=""> -->
+        </li>
+        <li class="footer_wave1">
+            <!-- <img src="images/footer_bg1.png" alt=""> -->
+        </li>
+        <li>
+            <img src="images/shining1.png" alt="">
+        </li>
+        <li
+        data-aos="zoom-in-left"
+        data-aos-delay="0"
+        data-aos-duration="2000">
+            <img src="images/phone_bg.png" alt="paper_sh">
+        </li>
+        <li 
+        data-aos="fade-down-right" 
+        data-aos-delay="100"
+        data-aos-duration="2000">
+            <img src="images/paper_bird.png" alt="paper_bird">
+        </li>
+        <li>
+            <img src="images/paper_fish.png" alt="paper_fish">
+        </li>
+    </ul>
+
+
+
+    <div id="section1">
+        <div class="left">
+            <div class="about_me">
+                <h2 class="on">About Me</h2>
+                <ul>
+                    <li class="picture"><img src="images/profill.png" alt=""></li>
+                    <li><p>저는 항상 긍정적으로 생각하고 잘 웃는 김예나 입니다. 시각디자인을 전공으로 하면서 
+                        웹에 대한 관심이 생겨 웹디자인을 공부 했습니다. 저는 <span>도전</span>을 좋아하고 노력하는 편
+                        이며 작은 일이라도 열심히 성실하게 합니다. 여러 번 도전해야 성장을 할 수 있듯이
+                        저도 성장할 수 있는 사람이 되고 싶습니다.</p></li>
+                </ul>
+            </div>
+
+            <div class="information">
+                <h2>Information</h2>
+                <ul>
+                    <li><img src="" alt=""></li>
+                    <li><p>010-2093-9710</p></li>
+                    <li><img src="" alt=""></li>
+                    <li><p>akrhrehd11@naver.com</p></li>
+                    <li><img src="" alt=""></li>
+                    <li><p>www.akrhrehd11.com</p></li>
+                    <li><img src="" alt=""></li>
+                    <!-- <li><p>경기도 수원시 영통구 망포동 늘푸른벽산아파트 101동 1001호</p></li> -->
+                </ul>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>2011년 2월 ~ 2013년 2월</li>
+                    <li>솔빛중학교 졸업</li>
+                    <li>2014년 2월 ~ 2016년 2월</li>
+                    <li>서천고등학교 졸업</li>
+                    <li>2016년 2월 ~ 2021년 10월</li>
+                    <li>백석대학교 시각디자인과 웹디자인 졸업</li>
+                </ul>
+            </div>
+
+            <div class="activity">
+                <h2>Activity</h2>
+                <ul>
+                    <li>2022년 7월 ~ 12월 10일</li>
+                    <li>그린컴퓨터아카데미 실무 <span>웹디자인</span> 수료</li>
+                    <li>2022년 5월 ~ 5월</li>
+                    <li>그린컴퓨터아카데미 에펙(After Effect) 수료</li>
+                    <li>2022년 2월 ~ 4월</li>
+                    <li>한식 수료</li>
+                </ul>
+            </div>
+
+            <div class="licence">
+                <h2>Licence</h2>
+                <ul>
+                    <li>2021년 8월</li>
+                    <li>반려동물관리사</li>
+                    <li>2022년 11월</li>
+                    <li><span>웹디자인기능사</span></li>
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li class="s_left">
+                        <ul>
+                            <li class="icon"><img src="images/icon1.png" alt="icon1"></li>
+                            <li><!-- <div class="progress" style="height: 1px;">
+                                <div class="progress-bar" role="progressbar" aria-label="Example 1px high" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div> -->
+                                <div class="progressbar" data-pr="80">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon2.png" alt="icon2"></li>
+                            <li>
+                                <div class="progressbar" data-pr="40">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon3.png" alt="icon3"></li>
+                            <li>
+                                <div class="progressbar" data-pr="60">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon4.png" alt="icon4"></li>
+                            <li>
+                                <div class="progressbar" data-pr="53">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon_h"><img src="images/icon5.png" alt="icon5"></li>
+                            <li>
+                                <div class="progressbar" data-pr="90">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon_c"><img src="images/icon6.png" alt="icon6"></li>
+                            <li>
+                                <div class="progressbar" data-pr="70">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon7.png" alt="icon7"></li>
+                            <li>
+                                <div class="progressbar" data-pr="10">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="s_right">
+                        <ul>
+                            <li class="icon"><img src="images/icon8.png" alt="icon8"></li>
+                            <li>
+                                <div class="progressbar" data-pr="80">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon9.png" alt="icon9"></li>
+                            <li>
+                                <div class="progressbar" data-pr="40">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon10.png" alt="icon10"></li>
+                            <li>
+                                <div class="progressbar" data-pr="40">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon11.png" alt="icon11"></li>
+                            <li>
+                                <div class="progressbar" data-pr="30">
+                                    <span></span>
+                                </div>
+                            </li>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon_j"><img src="images/icon12.png" alt="icon12"></li>
+                            <li>
+                                <div class="progressbar" data-pr="80">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="icon"><img src="images/icon13.png" alt="icon13"></li>
+                            <li>
+                                <div class="progressbar" data-pr="85">
+                                    <span></span>
+                                </div>
+                            </li>
+                        </ul>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="right">
+            <li>
+                <img src="images/phone1.png" alt="phone">
+                <ul class="button">
+                    <li class="about_me on">About Me</li>
+                    <li class="information">Information</li>
+                    <li class="education">Education</li>
+                    <li class="activity">Activity</li>
+                    <li class="licence">Licence</li>
+                    <li class="skills">Skills</li>
+                </ul>
+            </li>
+        </ul>    
+    </div>
+
+
+
+    <div id="section2">
+        <h2>PORTFOLIO</h2>
+
+        <div class="web web0">
+            <div class="p_left">
+                <ul class="p_left1">
+                    <h3>SONA 쇼핑몰</h3>
+                    <li class="menu">
+                        <p class="on" data-kind="web">web</p>
+                        <p data-kind="tablet">tablet</p>
+                        <p data-kind="mobile">mobile</p>
+                    </li>
+                </ul>
+                <ul class="p_right1">
+                    <li>
+                        <span></span>
+                        <p>마우스를 드래그 해주세요.</p>
+                    </li>
+                    <li class="mouse">
+                        <img src="images/mouse.png" alt="mouse">
+                        <span></span>
+                    </li>
+                    <ul class="bg">
+                        <li class="web"><img src="images/web_bg.png" alt=""></li>
+                        <li class="mobile"><img src="images/mobile_bg.png" alt=""></li>
+                        <li class="tablet"><img src="images/tablie_bg.png" alt=""></li>
+                    </ul>
+                    <ul class="design_img">
+                        <li class="web" style="overflow:scroll; width:473px; height:325px;"><img src="images/sona_web.png" alt=""></li>
+                        <li class="tablet"><img src="images/sona_ta.png" alt=""></li>
+                        <li class="mobile"><img src="images/sona_mobile.png" alt=""></li>
+                    </ul>
+                </ul>
+            </div>
+                <div class="p_right">
+                    <ul class="p_right1">
+                        <li>작업기간</li>
+                        <li>2022년 10월 21일 ~ 2022년 11월 2일</li>
+                        <li>concept</li>
+                        <li>디자인은 여성스러운 느낌의 소나 브랜드
+                            메인 컬러인 분홍색을 이용하였고 곡선, 
+                            원형의 디자인을 활용하여 부드러운 느낌을
+                            나타내었다. 그리고 바로가기 등의 ux를
+                            고려하였다.</li>
+                        <button>사이트 보기</button>
+                    </ul>
+                </div>
+        </div>
+        <div class="web web1">
+            <div class="p_left">
+                <ul class="p_left1">
+                    <h3>도토리 중개법원</h3>
+                    <li class="menu">
+                        <p class="on" data-kind="web">web</p>
+                        <p data-kind="mobile">mobile</p>
+                    </li>
+                </ul>
+                <ul class="p_right1">
+                    <li>
+                    <span></span>
+                    <p>마우스를 드래그 해주세요.</p>
+                    </li>
+                    <li class="mouse">
+                        <img src="images/mouse.png" alt="mouse">
+                        <span></span>
+                    </li>
+                    <ul class="bg">
+                        <li class="web"><img src="images/web_bg.png" alt=""></li>
+                        <li class="tablet"><img src="images/tablie_bg.png" alt=""></li>
+                        <li class="mobile"><img src="images/mobile_bg.png" alt=""></li>
+                    </ul>
+                    <ul class="design_img">
+                        <li class="web" style="overflow:scroll; width:473px; height:325px;"><img src="images/dotori_web.png" alt=""></li>
+                        <li class="mobile"><img src="images/dotori_mobile.png" alt=""></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="p_right">
+                <ul class="p_right1">
+                    <li>작업기간</li>
+                    <li>2022년 10월 21일 ~ 2022년 11월 2일</li>
+                    <li>concept</li>
+                    <li>부동산의 무게감과 도토리의 느낌을 ui로
+                        디자인을 하였다. 부동산은 주로 여러
+                        정보들이 많이 있어 필요한 기능들을 한눈에
+                        찾을 수 있도록 ux를 디자인 하였다.</li> 
+                    <button>사이트 보기</button>
+                </ul>
+            </div>
+        </div>
+        <div class="web web2">
+            <div class="p_left">
+                <ul class="p_left1">
+                    <h3>칵테일 사이트</h3>
+                    <li class="menu">
+                        <p class="on" data-kind="web">web</p>
+                    </li>
+                </ul>
+                <ul class="p_right1">
+                    <li>
+                    <span></span>
+                    <p>마우스를 드래그 해주세요.</p>
+                    </li>
+                    <li class="mouse">
+                        <img src="images/mouse.png" alt="mouse">
+                        <span></span>
+                    </li>
+                    <ul class="bg">
+                        <li class="web"><img src="images/web_bg.png" alt=""></li>
+                    </ul>
+                    <ul class="design_img">
+                        <li class="web" style="overflow:scroll; width:473px; height:325px;"><img src="images/cocktail_web.png" alt=""></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="p_right">
+                <ul class="p_right1">
+                    <li>작업기간</li>
+                    <li>2022년 10월 10일 ~ 2022년 10월 14일</li>
+                    <li>concept</li>
+                    <li>칵테일의 우아함과 부드러움의 느낌을 살려 디
+                        자인을 하였고, 메뉴와 추천 등을 잘 보이도록
+                        설계했다. 그리고 sns로 리뷰 등을 사용자가
+                        편리하게 볼 수 있게 했다.</li>
+                    <button>사이트 보기</button>
+                </ul>
+            </div>
+        </div>
+        <div class="web web3">
+            <div class="p_left">
+                <ul class="p_left1">
+                    <h3>뉴고려 병원</h3>
+                    <li class="menu">
+                        <p class="on" data-kind="web">web</p>
+                    </li>
+                </ul>
+                <ul class="p_right1">
+                    <li>
+                    <span></span>
+                    <p>마우스를 드래그 해주세요.</p>
+                    </li>
+                    <li class="mouse">
+                        <img src="images/mouse.png" alt="mouse">
+                        <span></span>
+                    </li>
+                    <ul class="bg">
+                        <li class="web"><img src="images/web_bg.png" alt=""></li>
+                    </ul>
+                    <ul class="design_img">
+                        <li class="web" style="overflow:scroll; width:473px; height:325px;"><img src="images/newgoru_web.png" alt=""></li>
+                        <li class="mobile"><img src="images/newgoru_mobile.png" alt=""></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="p_right">
+                <ul class="p_right1">
+                    <li>작업기간</li>
+                    <li>2022년 10월 2일 ~ 2022년 10월 9일</li>
+                    <li>concept</li>
+                    <li>뉴고려 병원의 로고 색과 형태를 이용해 사이트
+                        를디자인을 했다.의료 색인 편안한 느낌의 파랑
+                        과 초록 그리고 빨강을 사용 하였고 병원의 상
+                        징과 로고의 있는 십자가와 원을 이용한 디
+                        자인을 하였다.</li>
+                    <button>사이트 보기</button>
+                </ul>
+            </div>
+        </div>
+        <div class="web web4">
+            <div class="p_left">
+                <ul class="p_left1">
+                    <h3>건설업체 사이트</h3>
+                    <li class="menu">
+                        <p class="on" data-kind="web">web</p>
+                    </li>
+                </ul>
+                <ul class="p_right1">
+                    <li>
+                    <span></span>
+                    <p>마우스를 드래그 해주세요.</p>
+                    </li>
+                    <li class="mouse">
+                        <img src="images/mouse.png" alt="mouse">
+                        <span></span>
+                    </li>
+                    <ul class="bg">
+                        <li class="web"><img src="images/web_bg.png" alt=""></li>
+                    </ul>
+                    <ul class="design_img">
+                        <li class="web" style="overflow:scroll; width:473px; height:325px;"><img src="images/sona_web.png" alt=""></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="p_right">
+                <ul class="p_right1">
+                    <li>작업기간</li>
+                    <li>2022년 9월 27일 ~ 2022년 9월 28일</li>
+                    <li>concept</li>
+                    <li>깨끗하고 깔끔한 디자인을 구성하였고 청결한 
+                        느낌의 파란색을 메인으로 사용했습니다.
+                        심플하면서 정보들을 쉽게 찾을 수 있도록
+                        설계했다.</li>
+                    <button>사이트 보기</button>
+                </ul>
+            </div>
+        </div>
+                
+        
+        
+        <div class="p_bt">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <!-- <div class="swiper-slide"></div> -->
+                </div>       
+                <div class="slide_button">
+                    <div class="swiper-button-next on"></div>
+                    <div class="swiper-button-prev on"></div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
+
+
+    <div id="section3">
+        <h2>DESIGN</h2>
+
+        <div class="banner_box">
+            <div class="banner1">
+                <div class="d_left on">
+                    <h3>그린티 화장품</h3>
+                    <ul class="d_left1">
+                        <ul>
+                            <li>작업기간</li>
+                            <li>2022년 10월 21일 ~ 2022년 11월 2일</li>
+                        </ul>
+                        <ul>
+                            <li>concept</li>
+                            <li>
+                                자연의 화장품의 분위기로 순수한 잎과 자연의 색인 초록색을 사용하여 디자인 하였다.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>size</li>
+                            <li>가로 320 x 1060</li>
+                        </ul>
+                        <ul>
+                            <li>mockup</li>
+                            <li class="m_img">
+                                <img src="images/mockup.png" alt="">
+                            </li>
+                        </ul>
+                    </ul> 
+                </div>
+                <div class="d_right">
+                    <ul class="d_right1">
+                        <li>
+                            <img src="images/banner1.png" alt="banner">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="banner2">
+                <div class="d_left">
+                    <h3>웨딩배너</h3>
+                        <ul class="d_left1">
+                            <ul>
+                                <li>작업기간</li>
+                                <li>2022년 10월 21일 ~ 2022년 11월 2일</li>
+                            </ul>
+                            <ul>
+                                <li>concept</li>
+                                <li>
+                                    자연의 화장품의 분위기로 순수한 잎과 자연의 색인 초록색을 사용하여 디자인 하였다.
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>size</li>
+                                <li>가로 320 x 1060</li>
+                            </ul>
+                            <ul>
+                                <li>mockup</li>
+                                <li class="m_img">
+                                    <img src="images/mockup.png" alt="">
+                                </li>
+                            </ul>
+                        </ul> 
+                </div>
+                <div class="d_right">
+                    <ul class="d_right1">
+                        <li>
+                            <img src="images/banner1.png" alt="banner">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- <img src="images/banner2.png" alt="banner"> -->
+        <div class="d_bt">
+            <!-- Swiper -->
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/banner1.png" alt="">
+                    </div>
+                    <div class="swiper-slide"><img src="images/banner2.png" alt=""></div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <div class="yn-slide">
+                <span></span>
+            </div>
+    </div>
+    </div>
+
+
+
+    <footer 
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000">
+        
+        <ul class="content">
+            <li><h3>CONTACT</h3></li>
+            <li><p>010-2093-9710</p></li>
+            <li><p>akrhrehd11@naver.com</p></li>
+            <li>
+                <strong>COPYRIGHT C 2022 김예나 웹사이트 포트폴리오.ALL RIGHTS RESERVED.
+                본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.
+                해상도 1920*1080에 최적화 되었습니다.</strong>
+            </li>
+        </ul>
+    </footer>
+    <script src="script/jquery-3.6.1.min.js"></script>
+    <script src="script/potpolio.js"></script>    
+    
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper1 -->
+    <script>
+
+
+      var swiper = new Swiper(".mySwiper", {
+        initialSlide: 0,
+        effect: "cards",
+        grabCursor: true,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next1",
+            prevEl: ".swiper-button-prev1",
+        },
+        on: {
+            slideChange: function () {
+                console.log('몇번?'+this.realIndex)
+                $('.swiper-slide').css({marginTop:'200px'});
+                $('.swiper-slide').eq(this.realIndex).css({marginTop:0});
+                $('.swiper-slide').eq(this.realIndex-1).css({marginTop:'100px'});
+                $('.swiper-slide').eq(this.realIndex+1).css({marginTop:'150px'});
+
+                $('#section2 .web'+this.realIndex).show().siblings('.web').hide();
+                $('.web'+this.realIndex+' .menu p').eq(0).addClass('on').siblings().removeClass('on');
+                $('.web'+this.realIndex+' .design_img li').eq(0).show().siblings().hide();
+                $('.web'+this.realIndex+' .bg li').eq(0).show().siblings().hide();
+            }
+        }
+      }); 
+      
+    </script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+        var allLength = $('.mySwiper2 .swiper-slide').length;
+        var swiper = new Swiper(".mySwiper2", {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          on: {
+            slideChange: function () {
+                
+                var barW = (100*(this.realIndex+1)) / allLength;
+                if(this.realIndex >= allLength-3){
+                    console.log(this.realIndex == allLength-3)
+                    $('#section3 .d_bt .yn-slide span').stop().animate({width:'100%'})
+                } else {                    
+                    $('#section3 .d_bt .yn-slide span').stop().animate({width:barW+'%'})
+                };
+                console.log(allLength,this.realIndex)
+
+                $('.banner_box > div').eq(this.realIndex).show().siblings().hide();
+            }
+        }
+        });
+
+        // $('#section3 .d_bt .yn-slide span').css({width:(100/6)+'%'})
+      </script>
+
+
+      <script>
+        AOS.init();
+      </script>
+</body>
+</html>
